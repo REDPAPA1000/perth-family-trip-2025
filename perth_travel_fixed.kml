@@ -1,16 +1,13 @@
-I will correct all instances of `<n>` to `<name>` in the provided KML data.
-
-```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2">
   <Document>
     <name>빨간아빠 가족의 호주 퍼스 여행 지도</name>
     <description>2025년 10월 11일-18일 퍼스 7박 8일 가족여행 전체 장소 (총 39개)</description>
-
+    
     <Folder>
       <name>🏨 숙소 (6개)</name>
       <description>퍼스 여행 숙박 장소들</description>
-
+      
       <Placemark>
         <name>레지던스 온 랭리 파크</name>
         <description>1일차 | 퀸베드 2개 | 5,014,426 VND | 99 Adelaide Terrace, East Perth</description>
@@ -18,7 +15,7 @@ I will correct all instances of `<n>` to `<name>` in the provided KML data.
           <coordinates>115.8720,-31.9540,0</coordinates>
         </Point>
       </Placemark>
-
+      
       <Placemark>
         <name>세르반테스 피나클스 모텔</name>
         <description>2일차 | 퀸베드 1개 + 싱글베드 2개 | AUD 219.99 | 7 Aragon Street, Cervantes</description>
@@ -26,7 +23,7 @@ I will correct all instances of `<n>` to `<name>` in the provided KML data.
           <coordinates>115.0709,-30.4947,0</coordinates>
         </Point>
       </Placemark>
-
+      
       <Placemark>
         <name>디스커버리 파크스 스완 밸리</name>
         <description>3일차 | 퀸베드 1개 + 벙커베드 1개 + 더블베드 1개 | AUD 232.26 | 91 Benara Road, Caversham</description>
@@ -34,7 +31,7 @@ I will correct all instances of `<n>` to `<name>` in the provided KML data.
           <coordinates>115.9754,-31.8722,0</coordinates>
         </Point>
       </Placemark>
-
+      
       <Placemark>
         <name>디 애드네이트 퍼스 아트 시리즈</name>
         <description>4일차 | 더블베드 2개 | 45,000원 | 1/2 King Street, Perth</description>
@@ -42,7 +39,7 @@ I will correct all instances of `<n>` to `<name>` in the provided KML data.
           <coordinates>115.8590,-31.9520,0</coordinates>
         </Point>
       </Placemark>
-
+      
       <Placemark>
         <name>노보텔 퍼스 머레이 스트리트</name>
         <description>5일차 | 더블베드 2개 | 90,000원 | 388 Murray Street, Perth</description>
@@ -50,7 +47,7 @@ I will correct all instances of `<n>` to `<name>` in the provided KML data.
           <coordinates>115.8547,-31.9525,0</coordinates>
         </Point>
       </Placemark>
-
+      
       <Placemark>
         <name>포 포인트 바이 쉐라톤 퍼스</name>
         <description>6-7일차 | 더블베드 2개 | AUD 548 (2박) | 707 Wellington Street, Perth</description>
@@ -59,11 +56,11 @@ I will correct all instances of `<n>` to `<name>` in the provided KML data.
         </Point>
       </Placemark>
     </Folder>
-
+    
     <Folder>
       <name>🎯 관광지 & 명소 (14개)</name>
       <description>퍼스 여행 관광 명소들</description>
-
+      
       <Placemark>
         <name>퍼스 공항</name>
         <description>1일차/8일차 | 도착/출발지</description>
@@ -71,23 +68,23 @@ I will correct all instances of `<n>` to `<name>` in the provided KML data.
           <coordinates>115.9669,-31.9403,0</coordinates>
         </Point>
       </Placemark>
-
+      
       <Placemark>
         <name>엘리자베스 키</name>
-                    <description>5일차 | 스완강 워터프론트 | Elizabeth Quay, Perth</description>
+        <description>1일차 | 스완강 워터프론트 | Elizabeth Quay, Perth</description>
         <Point>
           <coordinates>115.8590,-31.9570,0</coordinates>
         </Point>
       </Placemark>
-
+      
       <Placemark>
         <name>스완 벨 타워</name>
-                    <description>5일차 | 벨타워 | Barrack Square, Perth</description>
+        <description>1일차 | 벨타워 | Barrack Square, Perth</description>
         <Point>
           <coordinates>115.8604,-31.9578,0</coordinates>
         </Point>
       </Placemark>
-
+      
       <Placemark>
         <name>퍼스 민트</name>
         <description>1일차/4일차 | 금 주조 시연 | Hay Street, East Perth</description>
@@ -95,7 +92,7 @@ I will correct all instances of `<n>` to `<name>` in the provided KML data.
           <coordinates>115.8697,-31.9548,0</coordinates>
         </Point>
       </Placemark>
-
+      
       <Placemark>
         <name>헤이 스트리트 몰</name>
         <description>1일차/7일차 | 쇼핑몰 | Hay Street Mall, Perth</description>
@@ -103,15 +100,15 @@ I will correct all instances of `<n>` to `<name>` in the provided KML data.
           <coordinates>115.8571,-31.9522,0</coordinates>
         </Point>
       </Placemark>
-
+      
       <Placemark>
         <name>런던 코트</name>
-                    <description>5일차 | 쇼핑 아케이드 | London Court, Perth</description>
+        <description>1일차 | 쇼핑 아케이드 | London Court, Perth</description>
         <Point>
           <coordinates>115.8576,-31.9520,0</coordinates>
         </Point>
       </Placemark>
-
+      
       <Placemark>
         <name>란셀린 사구</name>
         <description>2일차 | 샌드보딩/쿼드바이크 | Lancelin</description>
@@ -119,7 +116,7 @@ I will correct all instances of `<n>` to `<name>` in the provided KML data.
           <coordinates>115.3275,-30.5993,0</coordinates>
         </Point>
       </Placemark>
-
+      
       <Placemark>
         <name>피나클스 사막</name>
         <description>2일차 | 석회암 기둥 사막 | Nambung National Park</description>
@@ -127,7 +124,7 @@ I will correct all instances of `<n>` to `<name>` in the provided KML data.
           <coordinates>115.1573,-30.5988,0</coordinates>
         </Point>
       </Placemark>
-
+      
       <Placemark>
         <name>캐버시엄 야생동물 공원</name>
         <description>3일차 | 코알라/캥거루 체험 | Whiteman Drive East, Whiteman Park</description>
@@ -135,7 +132,7 @@ I will correct all instances of `<n>` to `<name>` in the provided KML data.
           <coordinates>115.9854,-31.8389,0</coordinates>
         </Point>
       </Placemark>
-
+      
       <Placemark>
         <name>킹스 파크</name>
         <description>4일차/7일차 | 도시 전망/식물원 | Fraser Avenue, Perth</description>
@@ -143,23 +140,23 @@ I will correct all instances of `<n>` to `<name>` in the provided KML data.
           <coordinates>115.8330,-31.9614,0</coordinates>
         </Point>
       </Placemark>
-
+      
       <Placemark>
         <name>프리맨틀 감옥</name>
-                    <description>1일차 | 유네스코 세계문화유산 | The Terrace, Fremantle</description>
+        <description>5일차 | 유네스코 세계문화유산 | The Terrace, Fremantle</description>
         <Point>
           <coordinates>115.7454,-32.0553,0</coordinates>
         </Point>
       </Placemark>
-
+      
       <Placemark>
         <name>프리맨틀 마켓</name>
-                    <description>1일차 | 수공예품 시장 (금요일 오픈!) | South Terrace, Fremantle</description>
+        <description>5일차 | 수공예품 시장 | South Terrace, Fremantle</description>
         <Point>
           <coordinates>115.7473,-32.0553,0</coordinates>
         </Point>
       </Placemark>
-
+      
       <Placemark>
         <name>로트네스트 섬</name>
         <description>6일차 | 쿼카 서식지 | Rottnest Island</description>
@@ -167,7 +164,7 @@ I will correct all instances of `<n>` to `<name>` in the provided KML data.
           <coordinates>115.5364,-32.0085,0</coordinates>
         </Point>
       </Placemark>
-
+      
       <Placemark>
         <name>퍼스 페리 터미널</name>
         <description>6일차 | 로트네스트 섬 페리 출발지 | Barrack Square, Perth</description>
@@ -176,11 +173,11 @@ I will correct all instances of `<n>` to `<name>` in the provided KML data.
         </Point>
       </Placemark>
     </Folder>
-
+    
     <Folder>
       <name>🍽️ 맛집 & 레스토랑 (18개)</name>
       <description>퍼스 여행 추천 맛집들</description>
-
+      
       <Placemark>
         <name>Wildflower Restaurant</name>
         <description>1일차/7일차 | 고급 호주 요리 ⭐⭐⭐⭐⭐</description>
@@ -188,7 +185,7 @@ I will correct all instances of `<n>` to `<name>` in the provided KML data.
           <coordinates>115.8580,-31.9530,0</coordinates>
         </Point>
       </Placemark>
-
+      
       <Placemark>
         <name>Woolworths</name>
         <description>1일차 | 대형 슈퍼마켓</description>
@@ -196,7 +193,7 @@ I will correct all instances of `<n>` to `<name>` in the provided KML data.
           <coordinates>115.8600,-31.9530,0</coordinates>
         </Point>
       </Placemark>
-
+      
       <Placemark>
         <name>Cervantes Lobster Shack</name>
         <description>2일차 | 신선한 랍스터 요리 ⭐⭐⭐⭐⭐</description>
@@ -204,7 +201,7 @@ I will correct all instances of `<n>` to `<name>` in the provided KML data.
           <coordinates>115.0709,-30.4947,0</coordinates>
         </Point>
       </Placemark>
-
+      
       <Placemark>
         <name>Sea Breeze Cafe</name>
         <description>2일차 | 현지 카페</description>
@@ -212,7 +209,7 @@ I will correct all instances of `<n>` to `<name>` in the provided KML data.
           <coordinates>115.0715,-30.4950,0</coordinates>
         </Point>
       </Placemark>
-
+      
       <Placemark>
         <name>Sandalford Wines</name>
         <description>3일차 | 와이너리 레스토랑 ⭐⭐⭐⭐</description>
@@ -220,7 +217,7 @@ I will correct all instances of `<n>` to `<name>` in the provided KML data.
           <coordinates>115.9688,-31.8694,0</coordinates>
         </Point>
       </Placemark>
-
+      
       <Placemark>
         <name>Swan Valley Chocolate Company</name>
         <description>3일차 | 수제 초콜릿 ⭐⭐⭐⭐⭐</description>
@@ -228,7 +225,7 @@ I will correct all instances of `<n>` to `<name>` in the provided KML data.
           <coordinates>115.9750,-31.8700,0</coordinates>
         </Point>
       </Placemark>
-
+      
       <Placemark>
         <name>The Swan Valley Hotel</name>
         <description>3일차 | 현지 요리</description>
@@ -236,7 +233,7 @@ I will correct all instances of `<n>` to `<name>` in the provided KML data.
           <coordinates>115.9760,-31.8705,0</coordinates>
         </Point>
       </Placemark>
-
+      
       <Placemark>
         <name>Long Chim Perth</name>
         <description>4일차/7일차 | 정통 태국 요리 ⭐⭐⭐⭐⭐</description>
@@ -244,7 +241,7 @@ I will correct all instances of `<n>` to `<name>` in the provided KML data.
           <coordinates>115.8575,-31.9522,0</coordinates>
         </Point>
       </Placemark>
-
+      
       <Placemark>
         <name>Petition Kitchen</name>
         <description>4일차 | 모던 호주 요리 ⭐⭐⭐⭐</description>
@@ -252,31 +249,31 @@ I will correct all instances of `<n>` to `<name>` in the provided KML data.
           <coordinates>115.8580,-31.9525,0</coordinates>
         </Point>
       </Placemark>
-
+      
       <Placemark>
         <name>Fisherman's Wharf</name>
-                    <description>1일차 | 피쉬 앤 칩스 ⭐⭐⭐⭐⭐</description>
+        <description>5일차 | 피쉬 앤 칩스 ⭐⭐⭐⭐⭐</description>
         <Point>
           <coordinates>115.7473,-32.0580,0</coordinates>
         </Point>
       </Placemark>
-
+      
       <Placemark>
         <name>Little Creatures Brewery</name>
-                    <description>1일차 | 로컬 브루어리 & 레스토랑 ⭐⭐⭐⭐</description>
+        <description>5일차 | 로컬 브루어리 & 레스토랑 ⭐⭐⭐⭐</description>
         <Point>
           <coordinates>115.7473,-32.0570,0</coordinates>
         </Point>
       </Placemark>
-
+      
       <Placemark>
         <name>Moore & Moore Cafe</name>
-                    <description>1일차 | 빈티지 카페 & 브런치</description>
+        <description>5일차 | 빈티지 카페 & 브런치</description>
         <Point>
           <coordinates>115.7470,-32.0575,0</coordinates>
         </Point>
       </Placemark>
-
+      
       <Placemark>
         <name>Thomsons Restaurant</name>
         <description>6일차 | 섬 내 메인 레스토랑 ⭐⭐⭐⭐</description>
@@ -284,7 +281,7 @@ I will correct all instances of `<n>` to `<name>` in the provided KML data.
           <coordinates>115.5364,-32.0085,0</coordinates>
         </Point>
       </Placemark>
-
+      
       <Placemark>
         <name>Geordie Bay Cafe</name>
         <description>6일차 | 해변가 카페</description>
@@ -292,7 +289,7 @@ I will correct all instances of `<n>` to `<name>` in the provided KML data.
           <coordinates>115.5370,-32.0090,0</coordinates>
         </Point>
       </Placemark>
-
+      
       <Placemark>
         <name>Hotel Rottnest</name>
         <description>6일차 | 섬 내 숙박 시설 레스토랑</description>
@@ -300,7 +297,7 @@ I will correct all instances of `<n>` to `<name>` in the provided KML data.
           <coordinates>115.5360,-32.0080,0</coordinates>
         </Point>
       </Placemark>
-
+      
       <Placemark>
         <name>Print Hall</name>
         <description>7일차 | 현대적 펍 & 레스토랑 ⭐⭐⭐⭐</description>
@@ -308,7 +305,7 @@ I will correct all instances of `<n>` to `<name>` in the provided KML data.
           <coordinates>115.8570,-31.9525,0</coordinates>
         </Point>
       </Placemark>
-
+      
       <Placemark>
         <name>The Classroom</name>
         <description>7일차 | 이탈리아 파스타 전문점 ⭐⭐⭐⭐</description>
@@ -316,7 +313,7 @@ I will correct all instances of `<n>` to `<name>` in the provided KML data.
           <coordinates>115.8565,-31.9520,0</coordinates>
         </Point>
       </Placemark>
-
+      
       <Placemark>
         <name>Fraser's Restaurant</name>
         <description>7일차 | 킹스 파크 내 레스토랑</description>
@@ -325,11 +322,11 @@ I will correct all instances of `<n>` to `<name>` in the provided KML data.
         </Point>
       </Placemark>
     </Folder>
-
+    
     <Folder>
       <name>🚗 교통 & 기타 (1개)</name>
       <description>렌터카 및 기타 시설</description>
-
+      
       <Placemark>
         <name>No Bird Car Rental Perth City</name>
         <description>2-4일차 | 렌터카 업체 | 160 Adelaide Terrace, Perth</description>
@@ -338,6 +335,6 @@ I will correct all instances of `<n>` to `<name>` in the provided KML data.
         </Point>
       </Placemark>
     </Folder>
-
+    
   </Document>
 </kml>

@@ -1,0 +1,49 @@
+카테고리,일차,장소명,영문명,주소,설명,색깔코드
+숙소,1일차,레지던스 온 랭리 파크,Residence on Langley Park,"99 Adelaide Terrace, East Perth WA, Australia",퀸베드 2개 | 첫날 숙소,#FF0000
+관광지,1일차,퍼스 공항,Perth Airport,"Perth Airport WA, Australia",도착지,#FF0000
+관광지,1일차,엘리자베스 키,Elizabeth Quay,"Elizabeth Quay, Perth WA, Australia",스완강 워터프론트,#FF0000
+관광지,1일차,스완 벨 타워,The Bell Tower,"Barrack Square, Perth WA, Australia",벨타워,#FF0000
+관광지,1일차,퍼스 민트,Perth Mint,"Hay Street, East Perth WA, Australia",금 주조 시연,#FF0000
+관광지,1일차,헤이 스트리트 몰,Hay Street Mall,"Hay Street Mall, Perth WA, Australia",쇼핑몰,#FF0000
+관광지,1일차,런던 코트,London Court,"London Court, Perth WA, Australia",쇼핑 아케이드,#FF0000
+맛집,1일차,Wildflower Restaurant,Wildflower Restaurant,"Level 33, COMO The Treasury, 1 Cathedral Avenue, Perth WA, Australia",고급 호주 요리 ⭐⭐⭐⭐⭐,#FF0000
+맛집,1일차,Woolworths,Woolworths,"Hay Street Mall, Perth WA, Australia",대형 슈퍼마켓,#FF0000
+
+숙소,2일차,세르반테스 피나클스 모텔,Cervantes Pinnacles Motel,"7 Aragon Street, Cervantes WA, Australia",퀸베드 1개 + 싱글베드 2개,#FF8C00
+관광지,2일차,란셀린 사구,Lancelin Sand Dunes,"Lancelin WA, Australia",샌드보딩/쿼드바이크,#FF8C00
+관광지,2일차,피나클스 사막,The Pinnacles,"Nambung National Park, WA, Australia",석회암 기둥 사막,#FF8C00
+기타,2일차,No Bird Car Rental Perth City,No Bird Car Rental,"160 Adelaide Terrace, Perth WA, Australia",렌터카 픽업,#FF8C00
+맛집,2일차,Cervantes Lobster Shack,Cervantes Lobster Shack,"30 Seville Street, Cervantes WA, Australia",신선한 랍스터 요리 ⭐⭐⭐⭐⭐,#FF8C00
+맛집,2일차,Sea Breeze Cafe,Sea Breeze Cafe,"Cervantes WA, Australia",현지 카페,#FF8C00
+
+숙소,3일차,디스커버리 파크스 스완 밸리,Discovery Parks - Swan Valley,"91 Benara Road, Caversham WA, Australia",퀸베드 1개 + 벙커베드 1개 + 더블베드 1개,#FFD700
+관광지,3일차,캐버시엄 야생동물 공원,Caversham Wildlife Park,"Whiteman Drive East, Whiteman Park WA, Australia",코알라/캥거루 체험,#FFD700
+맛집,3일차,Sandalford Wines,Sandalford Wines,"3210 West Swan Road, Caversham WA, Australia",와이너리 레스토랑 ⭐⭐⭐⭐,#FFD700
+맛집,3일차,Swan Valley Chocolate Company,Swan Valley Chocolate Company,"5123 West Swan Road, West Swan WA, Australia",수제 초콜릿 ⭐⭐⭐⭐⭐,#FFD700
+맛집,3일차,The Swan Valley Hotel,The Swan Valley Hotel,"10640 West Swan Road, Henley Brook WA, Australia",현지 요리,#FFD700
+
+숙소,4일차,디 애드네이트 퍼스 아트 시리즈,The Adnate Perth - Art Series,"1/2 King Street, Perth WA, Australia",더블베드 2개,#00FF00
+관광지,4일차,킹스 파크,Kings Park and Botanic Garden,"Fraser Avenue, Kings Park WA, Australia",도시 전망/식물원,#00FF00
+맛집,4일차,Long Chim Perth,Long Chim Perth,"Shop 4, State Buildings, 1/2 Barrack Street, Perth WA, Australia",정통 태국 요리 ⭐⭐⭐⭐⭐,#00FF00
+맛집,4일차,Petition Kitchen,Petition Kitchen,"State Buildings, 1/2 Barrack Street, Perth WA, Australia",모던 호주 요리 ⭐⭐⭐⭐,#00FF00
+
+숙소,5일차,노보텔 퍼스 머레이 스트리트,Novotel Perth Murray Street,"388 Murray Street, Perth WA, Australia",더블베드 2개,#0080FF
+관광지,5일차,프리맨틀 감옥,Fremantle Prison,"The Terrace, Fremantle WA, Australia",유네스코 세계문화유산,#0080FF
+관광지,5일차,프리맨틀 마켓,Fremantle Markets,"South Terrace, Fremantle WA, Australia",수공예품 시장,#0080FF
+맛집,5일차,Fisherman's Wharf,Fisherman's Wharf Fremantle,"43 Mews Road, Fremantle WA, Australia",피쉬 앤 칩스 ⭐⭐⭐⭐⭐,#0080FF
+맛집,5일차,Little Creatures Brewery,Little Creatures Brewery,"40 Mews Road, Fremantle WA, Australia",로컬 브루어리 & 레스토랑 ⭐⭐⭐⭐,#0080FF
+맛집,5일차,Moore & Moore Cafe,Moore & Moore Cafe,"46 Henry Street, Fremantle WA, Australia",빈티지 카페 & 브런치,#0080FF
+
+숙소,6일차,포 포인트 바이 쉐라톤 퍼스,Four Points by Sheraton Perth,"707 Wellington Street, Perth WA, Australia",더블베드 2개 (2박),#8A2BE2
+관광지,6일차,퍼스 페리 터미널,Perth Ferry Terminal,"Barrack Square, Perth WA, Australia",로트네스트 섬 페리 출발지,#8A2BE2
+관광지,6일차,로트네스트 섬,Rottnest Island,"Rottnest Island WA, Australia",쿼카 서식지,#8A2BE2
+맛집,6일차,Thomsons Restaurant,Thomsons Restaurant,"Rottnest Island WA, Australia",섬 내 메인 레스토랑 ⭐⭐⭐⭐,#8A2BE2
+맛집,6일차,Geordie Bay Cafe,Geordie Bay Cafe,"Rottnest Island WA, Australia",해변가 카페,#8A2BE2
+맛집,6일차,Hotel Rottnest,Hotel Rottnest,"Rottnest Island WA, Australia",섬 내 숙박 시설 레스토랑,#8A2BE2
+
+관광지,7일차,킹스 파크,Kings Park and Botanic Garden,"Fraser Avenue, Kings Park WA, Australia",재방문 - 쇼핑 전 마지막 관광,#8B4513
+맛집,7일차,Fraser's Restaurant,Fraser's Restaurant,"Kings Park, Fraser Avenue, West Perth WA, Australia",킹스 파크 내 레스토랑,#8B4513
+맛집,7일차,Print Hall,Print Hall,"125 St Georges Terrace, Perth WA, Australia",현대적 펍 & 레스토랑 ⭐⭐⭐⭐,#8B4513
+맛집,7일차,The Classroom,The Classroom,"140 William Street, Perth WA, Australia",이탈리아 파스타 전문점 ⭐⭐⭐⭐,#8B4513
+
+관광지,8일차,퍼스 공항,Perth Airport,"Perth Airport WA, Australia",출발지,#000000 
