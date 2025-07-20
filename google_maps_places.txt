@@ -1,0 +1,142 @@
+🇦🇺 빨간아빠 가족의 호주 퍼스 여행 - 구글 지도 저장용 장소 리스트
+
+=== 📍 복사해서 구글 지도에서 검색하고 저장하세요! ===
+
+🏨 숙소 (6개)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+1. 레지던스 온 랭리 파크 (Residence on Langley Park)
+   📍 99 Adelaide Terrace, East Perth WA, Australia
+
+2. 세르반테스 피나클스 모텔 (Cervantes Pinnacles Motel)
+   📍 7 Aragon Street, Cervantes WA, Australia
+
+3. 디스커버리 파크스 스완 밸리 (Discovery Parks - Swan Valley)
+   📍 91 Benara Road, Caversham WA, Australia
+
+4. 디 애드네이트 퍼스 아트 시리즈 (The Adnate Perth - Art Series)
+   📍 1/2 King Street, Perth WA, Australia
+
+5. 노보텔 퍼스 머레이 스트리트 (Novotel Perth Murray Street)
+   📍 388 Murray Street, Perth WA, Australia
+
+6. 포 포인트 바이 쉐라톤 퍼스 (Four Points by Sheraton Perth)
+   📍 707 Wellington Street, Perth WA, Australia
+
+🎯 관광지 & 명소 (14개)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+1. 퍼스 공항 (Perth Airport)
+   📍 Perth Airport WA, Australia
+
+2. 엘리자베스 키 (Elizabeth Quay)
+   📍 Elizabeth Quay, Perth WA, Australia
+
+3. 스완 벨 타워 (The Bell Tower)
+   📍 Barrack Square, Perth WA, Australia
+
+4. 퍼스 민트 (The Perth Mint)
+   📍 Hay Street, East Perth WA, Australia
+
+5. 헤이 스트리트 몰 (Hay Street Mall)
+   📍 Hay Street Mall, Perth WA, Australia
+
+6. 런던 코트 (London Court)
+   📍 London Court, Perth WA, Australia
+
+7. 란셀린 사구 (Lancelin Sand Dunes)
+   📍 Lancelin WA, Australia
+
+8. 피나클스 사막 (The Pinnacles Desert)
+   📍 Nambung National Park, Nambung WA, Australia
+
+9. 캐버시엄 야생동물 공원 (Caversham Wildlife Park)
+   📍 Whiteman Drive East, Whiteman Park WA, Australia
+
+10. 킹스 파크 (Kings Park and Botanic Garden)
+    📍 Fraser Avenue, Perth WA, Australia
+
+11. 프리맨틀 감옥 (Fremantle Prison)
+    📍 The Terrace, Fremantle WA, Australia
+
+12. 프리맨틀 마켓 (Fremantle Markets)
+    📍 South Terrace, Fremantle WA, Australia
+
+13. 로트네스트 섬 (Rottnest Island)
+    📍 Rottnest Island, Western Australia, Australia
+
+14. 퍼스 페리 터미널 (Perth Ferry Terminal)
+    📍 Barrack Square, Perth WA, Australia
+
+🍽️ 맛집 & 레스토랑 (18개)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+1. Wildflower Restaurant
+   📍 Perth WA, Australia
+
+2. Woolworths (슈퍼마켓)
+   📍 Perth WA, Australia
+
+3. Cervantes Lobster Shack
+   📍 Cervantes WA, Australia
+
+4. Sea Breeze Cafe
+   📍 Cervantes WA, Australia
+
+5. Sandalford Wines
+   📍 Caversham Avenue, Caversham WA, Australia
+
+6. Swan Valley Chocolate Company
+   📍 Swan Valley WA, Australia
+
+7. The Swan Valley Hotel
+   📍 Swan Valley WA, Australia
+
+8. Long Chim Perth
+   📍 Perth WA, Australia
+
+9. Petition Kitchen
+   📍 Perth WA, Australia
+
+10. Fisherman's Wharf
+    📍 Fremantle WA, Australia
+
+11. Little Creatures Brewery
+    📍 Fremantle WA, Australia
+
+12. Moore & Moore Cafe
+    📍 Fremantle WA, Australia
+
+13. Thomsons Restaurant
+    📍 Rottnest Island WA, Australia
+
+14. Geordie Bay Cafe
+    📍 Rottnest Island WA, Australia
+
+15. Hotel Rottnest
+    📍 Rottnest Island WA, Australia
+
+16. Print Hall
+    📍 Perth WA, Australia
+
+17. The Classroom
+    📍 Perth WA, Australia
+
+18. Fraser's Restaurant
+    📍 Kings Park, Perth WA, Australia
+
+🚗 교통 & 기타 (1개)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+1. No Bird Car Rental Perth City
+   📍 160 Adelaide Terrace, Perth WA, Australia
+
+=== 💡 사용법 ===
+1. 구글 지도 앱/웹에서 "저장됨" → "새 리스트" 클릭
+2. 리스트 이름: "호주 퍼스 여행" (또는 카테고리별로 분리)
+3. 위 장소명들을 복사해서 구글 지도에서 검색
+4. 각 장소에서 "저장" 버튼 → 해당 리스트 선택
+
+=== 📱 추천 리스트 구조 ===
+- "퍼스 숙소" (6개)
+- "퍼스 관광지" (14개)  
+- "퍼스 맛집" (18개)
+- "퍼스 기타" (1개)
+
+총 39개 장소 ✅ 

@@ -1,0 +1,1241 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>빨간아빠 가족의 호주 퍼스 여행기</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Noto Sans KR', Arial, sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1200px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            overflow: hidden;
+            margin: 10px auto;
+        }
+        .header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        .navbar, .sub-navbar {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            background: #34495e;
+            padding: 8px;
+            gap: 6px;
+        }
+        .navbar a, .sub-navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 12px 16px;
+            border-radius: 8px;
+            background: #3498db;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            font-size: 14px;
+            text-align: center;
+            min-width: 80px;
+            white-space: nowrap;
+            touch-action: manipulation;
+        }
+        .navbar a:hover, .sub-navbar a:hover {
+            background: #2980b9;
+            transform: translateY(-2px);
+        }
+        .section-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 16px;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 8px;
+        }
+        .card {
+            background: #f8f9fa;
+            border-left: 4px solid #3498db;
+            padding: 20px;
+            margin-bottom: 16px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .day-card {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 16px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .day-title {
+            font-size: 20px;
+            font-weight: bold;
+            color: #e74c3c;
+            margin-bottom: 12px;
+            border-bottom: 2px solid #e74c3c;
+            padding-bottom: 8px;
+        }
+        .activity-time {
+            background: #3498db;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 12px;
+            margin-right: 8px;
+        }
+        .google-map-link {
+            display: inline-block;
+            background: #27ae60;
+            color: white;
+            padding: 10px 16px;
+            border-radius: 8px;
+            text-decoration: none;
+            margin-top: 12px;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+        .google-map-link:hover {
+            background: #229954;
+        }
+        .accommodation-card {
+            background: #f0f8ff;
+            border: 2px solid #3498db;
+            border-radius: 12px;
+            padding: 16px;
+            margin-bottom: 16px;
+            position: relative;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .price-badge {
+            position: absolute;
+            top: -10px;
+            right: 16px;
+            background: #e74c3c;
+            color: white;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        .bed-info {
+            background: #e8f5e8;
+            border: 1px solid #27ae60;
+            border-radius: 8px;
+            padding: 12px;
+            margin: 12px 0;
+            font-weight: 500;
+        }
+        .info-section {
+            margin: 12px 0;
+        }
+        .info-title {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 6px;
+            font-size: 16px;
+        }
+        ul {
+            list-style: disc;
+            margin-left: 1.25rem;
+        }
+        li {
+            margin-bottom: 0.5rem;
+        }
+        
+        /* 탭 기능을 위한 스타일 */
+        .content-section {
+            display: none;
+            padding: 20px;
+        }
+        .content-section.active {
+            display: block;
+        }
+        .navbar a.active {
+            background-color: #2980b9 !important;
+            transform: scale(1.05);
+        }
+        .sub-navbar a.active {
+            background-color: #c0392b !important;
+            transform: scale(1.05);
+        }
+
+        /* 모바일 최적화 */
+        @media (max-width: 768px) {
+            .container {
+                margin: 5px;
+                border-radius: 0;
+            }
+            .header {
+                padding: 15px 10px;
+            }
+            .header h1 {
+                font-size: 24px;
+                margin-bottom: 8px;
+            }
+            .header p {
+                font-size: 16px;
+            }
+            .navbar, .sub-navbar {
+                padding: 6px;
+                gap: 4px;
+            }
+            .navbar a, .sub-navbar a {
+                padding: 10px 12px;
+                font-size: 13px;
+                min-width: 70px;
+                flex: 1;
+            }
+            .content-section {
+                padding: 15px;
+            }
+            .section-title {
+                font-size: 20px;
+                margin-bottom: 12px;
+            }
+            .day-title {
+                font-size: 18px;
+                margin-bottom: 10px;
+            }
+            .card, .day-card, .accommodation-card {
+                padding: 15px;
+                margin-bottom: 12px;
+            }
+            .activity-time {
+                font-size: 11px;
+                padding: 3px 6px;
+                margin-right: 6px;
+                display: inline-block;
+                margin-bottom: 4px;
+            }
+            .google-map-link {
+                padding: 8px 12px;
+                font-size: 14px;
+                display: block;
+                text-align: center;
+                margin-top: 10px;
+            }
+            .price-badge {
+                position: static;
+                display: inline-block;
+                margin-bottom: 10px;
+                font-size: 13px;
+                padding: 5px 10px;
+            }
+            .accommodation-card h3 {
+                font-size: 16px;
+                margin: 8px 0;
+            }
+            .bed-info {
+                padding: 10px;
+                margin: 10px 0;
+                font-size: 14px;
+            }
+            .info-title {
+                font-size: 15px;
+                margin-bottom: 5px;
+            }
+            ul {
+                margin-left: 1rem;
+            }
+            li {
+                margin-bottom: 0.4rem;
+                font-size: 14px;
+            }
+            
+            /* 테이블 모바일 최적화 */
+            .table-container {
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+            table {
+                min-width: 600px;
+                font-size: 12px;
+            }
+            th, td {
+                padding: 8px 6px;
+                white-space: nowrap;
+            }
+        }
+
+        /* 아주 작은 화면 (360px 이하) */
+        @media (max-width: 360px) {
+            .navbar a, .sub-navbar a {
+                font-size: 12px;
+                padding: 8px 10px;
+                min-width: 60px;
+            }
+            .header h1 {
+                font-size: 20px;
+            }
+            .header p {
+                font-size: 14px;
+            }
+            .section-title {
+                font-size: 18px;
+            }
+            table {
+                min-width: 500px;
+                font-size: 11px;
+            }
+            th, td {
+                padding: 6px 4px;
+            }
+        }
+    </style>
+    <script>
+        // 페이지 로드 시 초기화
+        document.addEventListener('DOMContentLoaded', function() {
+            // 기본적으로 '개요' 섹션을 보여줌
+            showSection('개요');
+            setActiveMenu('개요');
+        });
+
+        // 섹션 표시 함수
+        function showSection(sectionId) {
+            // 모든 섹션 숨기기
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // 선택된 섹션 보이기
+            const targetSection = document.getElementById(sectionId);
+            if (targetSection) {
+                targetSection.classList.add('active');
+            }
+        }
+
+        // 활성 메뉴 설정 함수
+        function setActiveMenu(sectionId) {
+            // 모든 메뉴에서 active 클래스 제거
+            const menuItems = document.querySelectorAll('.navbar a, .sub-navbar a');
+            menuItems.forEach(item => {
+                item.classList.remove('active');
+            });
+            
+            // 선택된 메뉴에 active 클래스 추가
+            const activeMenu = document.querySelector(`[onclick="navigateToSection('${sectionId}')"]`);
+            if (activeMenu) {
+                activeMenu.classList.add('active');
+            }
+        }
+
+        // 네비게이션 함수
+        function navigateToSection(sectionId) {
+            showSection(sectionId);
+            setActiveMenu(sectionId);
+            
+            // 페이지 상단으로 스크롤
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="text-4xl font-bold mb-2">✈️ 빨간아빠 가족의 호주 퍼스 여행기</h1>
+            <p class="text-lg">고등학생 자녀와 함께하는 알찬 퍼스 탐험!</p>
+        </header>
+
+        <nav class="navbar">
+            <a href="#" onclick="navigateToSection('개요')">📋 개요</a>
+            <a href="#" onclick="navigateToSection('1일차')">📅 1일차</a>
+            <a href="#" onclick="navigateToSection('2일차')">📅 2일차</a>
+            <a href="#" onclick="navigateToSection('3일차')">📅 3일차</a>
+        </nav>
+
+        <nav class="sub-navbar">
+            <a href="#" onclick="navigateToSection('4일차')">📅 4일차</a>
+            <a href="#" onclick="navigateToSection('5일차')">📅 5일차</a>
+            <a href="#" onclick="navigateToSection('6일차')">📅 6일차</a>
+            <a href="#" onclick="navigateToSection('7일차')">📅 7일차</a>
+        </nav>
+
+        <section id="개요" class="mb-8 content-section">
+            <h2 class="section-title">📋 개요</h2>
+            <div class="card">
+                <h3 class="text-xl font-semibold mb-3 text-gray-800">🇦🇺 호주 퍼스 7박 8일 가족여행</h3>
+                <ul class="mb-4">
+                    <li><strong>여행 기간:</strong> 2025년 10월 11일 (토) ~ 10월 18일 (토) - 7박 8일</li>
+                    <li><strong>여행 인원:</strong> 가족 4명 (부모 2명 + 고등학생 자녀 2명)</li>
+                    <li><strong>항공사:</strong> Vietjet Air (베트남 경유)</li>
+                    <li><strong>출국:</strong> 2025년 10월 11일 (토) 01:00 (베트남 출발) → 08:55 (퍼스 도착)</li>
+                    <li><strong>귀국:</strong> 2025년 10월 18일 (금) 10:15 (퍼스 출발) → 15:50 (베트남 도착)</li>
+                </ul>
+                
+                <div class="table-container">
+                    <table class="w-full border-collapse border border-gray-300 text-sm">
+                        <thead>
+                            <tr class="bg-blue-100">
+                                <th class="border border-gray-300 px-3 py-2 text-left">날짜</th>
+                                <th class="border border-gray-300 px-3 py-2 text-left">주요 일정</th>
+                                <th class="border border-gray-300 px-3 py-2 text-left">숙소</th>
+                                <th class="border border-gray-300 px-3 py-2 text-left">비용</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="border border-gray-300 px-3 py-2">10/11 (토)</td>
+                                <td class="border border-gray-300 px-3 py-2">퍼스 도착, 엘리자베스 키, 퍼스 민트</td>
+                                <td class="border border-gray-300 px-3 py-2">레지던스 온 랭리 파크</td>
+                                <td class="border border-gray-300 px-3 py-2">5,014,426 VND</td>
+                            </tr>
+                            <tr class="bg-gray-50">
+                                <td class="border border-gray-300 px-3 py-2">10/12 (일)</td>
+                                <td class="border border-gray-300 px-3 py-2">렌터카, 란셀린 사구, 피나클스 사막</td>
+                                <td class="border border-gray-300 px-3 py-2">세르반테스 피나클스 모텔</td>
+                                <td class="border border-gray-300 px-3 py-2">AUD 219.99</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-300 px-3 py-2">10/13 (월)</td>
+                                <td class="border border-gray-300 px-3 py-2">캐버시엄 야생동물 공원, 스완 밸리</td>
+                                <td class="border border-gray-300 px-3 py-2">디스커버리 파크스 스완 밸리</td>
+                                <td class="border border-gray-300 px-3 py-2">AUD 232.26</td>
+                            </tr>
+                            <tr class="bg-gray-50">
+                                <td class="border border-gray-300 px-3 py-2">10/14 (화)</td>
+                                <td class="border border-gray-300 px-3 py-2">퍼스 복귀, 킹스 파크, 시내 관광</td>
+                                <td class="border border-gray-300 px-3 py-2">디 애드네이트 퍼스</td>
+                                <td class="border border-gray-300 px-3 py-2">45,000원</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-300 px-3 py-2">10/15 (수)</td>
+                                <td class="border border-gray-300 px-3 py-2">프리맨틀 당일치기</td>
+                                <td class="border border-gray-300 px-3 py-2">노보텔 퍼스 머레이 스트리트</td>
+                                <td class="border border-gray-300 px-3 py-2">90,000원</td>
+                            </tr>
+                            <tr class="bg-gray-50">
+                                <td class="border border-gray-300 px-3 py-2">10/16 (목)</td>
+                                <td class="border border-gray-300 px-3 py-2">로트네스트 섬, 쿼카와 사진</td>
+                                <td class="border border-gray-300 px-3 py-2 rowspan='2'>포 포인트 바이 쉐라톤 퍼스</td>
+                                <td class="border border-gray-300 px-3 py-2 rowspan='2'>AUD 548 (2박)</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-300 px-3 py-2">10/17 (금)</td>
+                                <td class="border border-gray-300 px-3 py-2">킹스 파크, 쇼핑, 마지막 밤</td>
+                            </tr>
+                            <tr class="bg-gray-50">
+                                <td class="border border-gray-300 px-3 py-2">10/18 (토)</td>
+                                <td class="border border-gray-300 px-3 py-2">퍼스 출발</td>
+                                <td class="border border-gray-300 px-3 py-2">-</td>
+                                <td class="border border-gray-300 px-3 py-2">-</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="text-xl font-semibold mb-3 text-gray-800">🎒 준비물</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <h4 class="font-semibold mb-2 text-blue-600">📋 필수 서류</h4>
+                        <ul>
+                            <li><strong>여권:</strong> 유효기간 6개월 이상</li>
+                            <li><strong>비자:</strong> 호주 ETA 또는 eVisitor (사전 온라인 신청)</li>
+                            <li><strong>국제운전면허증:</strong> 렌터카 이용 시 필수</li>
+                            <li><strong>해외여행보험:</strong> 의료비 및 여행 관련 보험</li>
+                            <li><strong>신용카드:</strong> 렌터카, 호텔 보증금 등</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold mb-2 text-green-600">🎒 짐 준비</h4>
+                        <ul>
+                            <li><strong>의류:</strong> 10월 봄철 의류 (낮 20-25℃, 밤 10-15℃)</li>
+                            <li><strong>자외선 차단제:</strong> SPF 50+ 권장</li>
+                            <li><strong>선글라스, 모자:</strong> 강한 자외선 대비</li>
+                            <li><strong>편한 운동화:</strong> 많은 걸음과 야외 활동</li>
+                            <li><strong>수영복:</strong> 로트네스트 섬 해변 활동</li>
+                            <li><strong>카메라/스마트폰:</strong> 쿼카와 인증샷!</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="1일차" class="mb-8 content-section">
+            <h2 class="section-title">📅 1일차: 2025년 10월 11일 (토)</h2>
+            
+            <!-- 숙소 정보 -->
+            <div class="accommodation-card">
+                <div class="price-badge">5,014,426 VND (약 220,000원)</div>
+                <h3 class="text-xl font-bold mb-2 text-gray-800">🏨 숙소: 레지던스 온 랭리 파크</h3>
+                <div class="bed-info">
+                    <strong>🛏️ 침실:</strong> 퀸베드 2개 | <strong>📍 주소:</strong> 99 Adelaide Terrace, East Perth
+                </div>
+                <div class="kitchen-info bg-red-50 p-3 rounded-lg mt-2">
+                    <strong>🏨 숙소 타입:</strong> 아파트형 호텔 (주방 시설 없음) | <strong>🍽️ 외식 필요</strong>
+                </div>
+                <div class="info-section">
+                    <div class="info-title">🚌 교통정보</div>
+                    <ul>
+                        <li>퍼스 공항에서 대중교통 이용 (공항 셔틀버스 → 시내 → 도보)</li>
+                        <li>380번 버스: 공항 → 퍼스 기차역 (약 40분, AUD 5)</li>
+                        <li>퍼스 기차역에서 숙소까지 도보 3분</li>
+                    </ul>
+                </div>
+                <div class="info-section">
+                    <div class="info-title">🛒 쇼핑 정보</div>
+                    <ul>
+                        <li><strong>Seoul Mart City:</strong> 한국마트 (도보 5분) - 내일 요리용 조미료 확인 ⭐⭐⭐⭐⭐</li>
+                        <li><strong>Coles Express:</strong> 편의점 (도보 5분) - 간식, 음료 ⭐⭐⭐</li>
+                        <li><strong>Woolworths Metro:</strong> 슈퍼마켓 (도보 8분) - 간단한 즉석식품 ⭐⭐⭐⭐</li>
+                    </ul>
+                </div>
+                <div class="info-section">
+                    <div class="info-title">🍽️ 주변 맛집 (외식시)</div>
+                    <ul>
+                        <li><strong>Hiss & Smoke:</strong> 가성비 BBQ 맛집 (도보 10분) ⭐⭐⭐⭐</li>
+                        <li><strong>Mary Street Bakery:</strong> 현지인 추천 베이커리 (도보 8분) ⭐⭐⭐⭐⭐</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="day-card">
+                <h3 class="day-title">📅 퍼스 도착 및 시내 핵심 탐방</h3>
+                <div class="table-container">
+                    <table class="w-full border-collapse border border-gray-300 text-sm">
+                        <thead>
+                            <tr class="bg-blue-100">
+                                <th class="border border-gray-300 px-3 py-2 text-left w-1/4">🕐 시간</th>
+                                <th class="border border-gray-300 px-3 py-2 text-left">📍 활동 내용</th>
+                                <th class="border border-gray-300 px-3 py-2 text-left w-1/4">📌 장소/비고</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="border border-gray-300 px-3 py-2 font-medium">08:55</td>
+                                <td class="border border-gray-300 px-3 py-2">퍼스 공항 도착</td>
+                                <td class="border border-gray-300 px-3 py-2">Vietjet Air (베트남 경유)</td>
+                            </tr>
+                            <tr class="bg-gray-50">
+                                <td class="border border-gray-300 px-3 py-2 font-medium">10:00 - 10:45</td>
+                                <td class="border border-gray-300 px-3 py-2">공항에서 숙소로 이동</td>
+                                <td class="border border-gray-300 px-3 py-2">택시 (약 45분)</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-300 px-3 py-2 font-medium">10:45 - 11:30</td>
+                                <td class="border border-gray-300 px-3 py-2">숙소 체크인 및 휴식</td>
+                                <td class="border border-gray-300 px-3 py-2">레지던스 온 랭리 파크</td>
+                            </tr>
+                            <tr class="bg-gray-50">
+                                <td class="border border-gray-300 px-3 py-2 font-medium">11:30 - 12:30</td>
+                                <td class="border border-gray-300 px-3 py-2">점심 식사</td>
+                                <td class="border border-gray-300 px-3 py-2">Wildflower Restaurant 추천</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-300 px-3 py-2 font-medium">12:30 - 14:30</td>
+                                <td class="border border-gray-300 px-3 py-2"><strong>엘리자베스 키 & 스완 벨 타워</strong> 방문</td>
+                                <td class="border border-gray-300 px-3 py-2">스완강 워터프론트</td>
+                            </tr>
+                            <tr class="bg-gray-50">
+                                <td class="border border-gray-300 px-3 py-2 font-medium">14:30 - 16:30</td>
+                                <td class="border border-gray-300 px-3 py-2"><strong>퍼스 민트</strong> 방문</td>
+                                <td class="border border-gray-300 px-3 py-2">금 주조 시연 관람</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-300 px-3 py-2 font-medium">16:30 - 18:00</td>
+                                <td class="border border-gray-300 px-3 py-2"><strong>헤이 스트리트 몰 & 런던 코트</strong> 쇼핑</td>
+                                <td class="border border-gray-300 px-3 py-2">퍼스 시내 중심가</td>
+                            </tr>
+                            <tr class="bg-gray-50">
+                                <td class="border border-gray-300 px-3 py-2 font-medium">18:00 - 20:00</td>
+                                <td class="border border-gray-300 px-3 py-2">저녁 식사</td>
+                                <td class="border border-gray-300 px-3 py-2">Mary Street Bakery 또는 Hiss & Smoke</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-300 px-3 py-2 font-medium">20:00 이후</td>
+                                <td class="border border-gray-300 px-3 py-2">숙소 복귀 및 휴식</td>
+                                <td class="border border-gray-300 px-3 py-2">첫날 피로 회복</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <a href="https://www.google.com/maps/dir/Perth+Airport,+Perth+Airport+WA,+Australia/Residence+on+Langley+Park,+Adelaide+Terrace,+East+Perth+WA,+Australia/Elizabeth+Quay,+Perth+WA,+Australia/The+Bell+Tower,+Barrack+Square,+Perth+WA,+Australia/The+Perth+Mint,+Hay+Street,+East+Perth+WA,+Australia/Hay+Street+Mall,+Perth+WA,+Australia" target="_blank" class="google-map-link">1일차 동선 지도 보기</a>
+            </div>
+        </section>
+
+        <section id="2일차" class="mb-8 content-section">
+            <h2 class="section-title">📅 2일차: 2025년 10월 12일 (일)</h2>
+            
+            <!-- 렌터카 정보 -->
+            <div class="card mb-4">
+                <h3 class="text-xl font-bold mb-2 text-red-600">🚗 렌터카 정보</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <ul>
+                            <li><strong>업체:</strong> No Bird Car Rental Perth City</li>
+                            <li><strong>주소:</strong> 160 Adelaide Tce, Perth</li>
+                            <li><strong>픽업:</strong> 09:30 (2일차)</li>
+                            <li><strong>반납:</strong> 11:00 (4일차)</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul>
+                            <li><strong>차량:</strong> 중형 SUV/세단 (4인 가족용)</li>
+                            <li><strong>주의:</strong> 호주는 우측 핸들, 좌측 통행</li>
+                            <li><strong>용도:</strong> 피나클스 사막, 스완 밸리 여행</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 숙소 정보 -->
+            <div class="accommodation-card">
+                <div class="price-badge">AUD 219.99 (약 200,000원)</div>
+                <h3 class="text-xl font-bold mb-2 text-gray-800">🏨 숙소: 세르반테스 피나클스 모텔</h3>
+                <div class="bed-info">
+                    <strong>🛏️ 침실:</strong> 퀸베드 1개 + 싱글베드 2개 | <strong>📍 주소:</strong> 7 Aragon St, Cervantes
+                </div>
+                <div class="kitchen-info bg-green-50 p-3 rounded-lg mt-2">
+                    <strong>🍳 주방 시설:</strong> 완비 (냉장고, 전자레인지, 쿡탑, 주방용품) | <strong>🛒 요리 가능!</strong>
+                </div>
+                <div class="info-section">
+                    <div class="info-title">🚗 교통정보</div>
+                    <ul>
+                        <li>피나클스 사막까지 차로 15분</li>
+                        <li>란셀린 사구까지 차로 20분</li>
+                        <li>렌터카 필수 (대중교통 제한적)</li>
+                    </ul>
+                </div>
+                <div class="info-section">
+                    <div class="info-title">🛒 식재료 구매 완료!</div>
+                    <ul>
+                        <li><strong>Seoul Mart City:</strong> 출발 전 구매 완료 - 한국 조미료, 김치, 쌀 ✅</li>
+                        <li><strong>Jurien Bay IGA:</strong> 이동 중 구매 완료 - 신선한 고기, 야채 ✅</li>
+                        <li><strong>저녁 메뉴:</strong> 닭볶음탕 + 쌀밥 + 김치 🍲</li>
+                    </ul>
+                </div>
+                <div class="info-section">
+                    <div class="info-title">🍽️ 주변 맛집 (외식시)</div>
+                    <ul>
+                        <li><strong>Cervantes Lobster Shack:</strong> 신선한 랍스터 요리 (도보 3분) ⭐⭐⭐⭐⭐</li>
+                        <li><strong>Sea Breeze Cafe:</strong> 현지 카페 (도보 5분)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="day-card">
+                <h3 class="day-title">🚗 렌터카 여행 시작: 란셀린 사구 & 피나클스 사막</h3>
+                <div class="table-container">
+                    <table class="w-full border-collapse border border-gray-300 text-sm">
+                        <thead>
+                            <tr class="bg-blue-100">
+                                <th class="border border-gray-300 px-3 py-2 text-left w-1/4">🕐 시간</th>
+                                <th class="border border-gray-300 px-3 py-2 text-left">📍 활동 내용</th>
+                                <th class="border border-gray-300 px-3 py-2 text-left w-1/4">📌 장소/비고</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="border border-gray-300 px-3 py-2 font-medium">08:00 - 09:00</td>
+                                <td class="border border-gray-300 px-3 py-2">아침 식사 후 체크아웃</td>
+                                <td class="border border-gray-300 px-3 py-2">레지던스 온 랭리 파크</td>
+                            </tr>
+                            <tr class="bg-gray-50">
+                                <td class="border border-gray-300 px-3 py-2 font-medium">09:00 - 09:30</td>
+                                <td class="border border-gray-300 px-3 py-2">렌터카 업체로 이동</td>
+                                <td class="border border-gray-300 px-3 py-2">No Bird 렌터카 퍼스 시티 지점</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-300 px-3 py-2 font-medium">08:30 - 09:00</td>
+                                <td class="border border-gray-300 px-3 py-2"><strong>🛒 Seoul Mart City 쇼핑</strong> (한국 조미료/기본재료)</td>
+                                <td class="border border-gray-300 px-3 py-2">고추장, 된장, 간장, 참기름, 김치, 쌀</td>
+                            </tr>
+                            <tr class="bg-gray-50">
+                                <td class="border border-gray-300 px-3 py-2 font-medium">09:00 - 09:30</td>
+                                <td class="border border-gray-300 px-3 py-2">렌터카 픽업 및 차량 상태 확인</td>
+                                <td class="border border-gray-300 px-3 py-2">중형 SUV/세단 (4인 가족용)</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-300 px-3 py-2 font-medium">09:30 - 11:00</td>
+                                <td class="border border-gray-300 px-3 py-2">퍼스에서 <strong>란셀린 사구</strong>로 이동</td>
+                                <td class="border border-gray-300 px-3 py-2">드라이브 (1시간 30분)</td>
+                            </tr>
+                            <tr class="bg-gray-50">
+                                <td class="border border-gray-300 px-3 py-2 font-medium">11:00 - 13:00</td>
+                                <td class="border border-gray-300 px-3 py-2"><strong>란셀린 사구 체험</strong></td>
+                                <td class="border border-gray-300 px-3 py-2">샌드보딩, 쿼드바이크</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-300 px-3 py-2 font-medium">13:00 - 13:30</td>
+                                <td class="border border-gray-300 px-3 py-2"><strong>🛒 Jurien Bay IGA 쇼핑</strong> (신선 재료)</td>
+                                <td class="border border-gray-300 px-3 py-2">고기, 야채, 우유, 계란, 식빵</td>
+                            </tr>
+                            <tr class="bg-gray-50">
+                                <td class="border border-gray-300 px-3 py-2 font-medium">13:30 - 14:00</td>
+                                <td class="border border-gray-300 px-3 py-2"><strong>피나클스 사막</strong>으로 이동</td>
+                                <td class="border border-gray-300 px-3 py-2">Jurien Bay에서 30분</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-300 px-3 py-2 font-medium">14:00 - 17:00</td>
+                                <td class="border border-gray-300 px-3 py-2"><strong>피나클스 사막 탐험</strong></td>
+                                <td class="border border-gray-300 px-3 py-2">석회암 기둥 감상, 사진 촬영</td>
+                            </tr>
+                            <tr class="bg-gray-50">
+                                <td class="border border-gray-300 px-3 py-2 font-medium">17:00 - 17:30</td>
+                                <td class="border border-gray-300 px-3 py-2">숙소로 이동</td>
+                                <td class="border border-gray-300 px-3 py-2">세르반테스 피나클스 모텔</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-300 px-3 py-2 font-medium">17:30 - 18:00</td>
+                                <td class="border border-gray-300 px-3 py-2">체크인 및 숙소 확인</td>
+                                <td class="border border-gray-300 px-3 py-2">세르반테스 피나클스 모텔</td>
+                            </tr>
+                            <tr class="bg-gray-50">
+                                <td class="border border-gray-300 px-3 py-2 font-medium">18:00 - 21:00</td>
+                                <td class="border border-gray-300 px-3 py-2"><strong>🍲 닭볶음탕 요리 & 저녁 식사</strong></td>
+                                <td class="border border-gray-300 px-3 py-2">한국식 닭볶음탕 + 쌀밥 + 김치</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <a href="https://www.google.com/maps/dir/Residence+on+Langley+Park,+Adelaide+Terrace,+East+Perth+WA,+Australia/Seoul+Mart+City,+133+Barrack+St,+Perth+WA,+Australia/No+Birds+Car+Rental+Perth+City,+Adelaide+Terrace,+Perth+WA,+Australia/Lancelin+Sand+Dunes,+Lancelin+WA,+Australia/Jurien+Bay+IGA,+Jurien+Bay+WA,+Australia/The+Pinnacles+Desert,+Nambung+WA,+Australia/Cervantes+Pinnacles+Motel,+Aragon+Street,+Cervantes+WA,+Australia" target="_blank" class="google-map-link">2일차 동선 지도 보기 (Seoul Mart → Jurien Bay IGA 경유)</a>
+            </div>
+        </section>
+
+        <section id="3일차" class="mb-8 content-section">
+            <h2 class="section-title">📅 3일차: 2025년 10월 13일 (월)</h2>
+            
+            <!-- 숙소 정보 -->
+            <div class="accommodation-card">
+                <div class="price-badge">AUD 232.26 (약 210,000원)</div>
+                <h3 class="text-xl font-bold mb-2 text-gray-800">🏨 숙소: 디스커버리 파크스 스완 밸리</h3>
+                <div class="bed-info">
+                    <strong>🛏️ 침실:</strong> 퀸베드 1개 + 벙커베드 1개 + 더블베드 1개 | <strong>📍 주소:</strong> 91 Benara Rd, Caversham
+                </div>
+                <div class="kitchen-info bg-green-50 p-3 rounded-lg mt-2">
+                    <strong>🍳 간이 주방:</strong> 완비 (냉장고, 전자레인지, 쿡탑, 기본 주방용품) | <strong>🛒 요리 가능!</strong>
+                </div>
+                <div class="info-section">
+                    <div class="info-title">🚗 교통정보</div>
+                    <ul>
+                        <li>캐버시엄 야생동물 공원까지 차로 10분</li>
+                        <li>스완 밸리 와이너리들까지 차로 5-15분</li>
+                    </ul>
+                </div>
+                <div class="info-section">
+                    <div class="info-title">🛒 추가 식재료 (필요시)</div>
+                    <ul>
+                        <li><strong>Coles Swan Valley:</strong> 대형 슈퍼마켓 (차로 5분) - 추가 식재료 필요시 ⭐⭐⭐⭐⭐</li>
+                        <li><strong>💡 참고:</strong> 2일차에서 구매한 한국 조미료와 기본 재료 활용</li>
+                        <li><strong>🍲 추천 메뉴:</strong> 볶음밥, 라면, 간단한 한국 요리</li>
+                    </ul>
+                </div>
+                <div class="info-section">
+                    <div class="info-title">🍽️ 주변 맛집 (외식시)</div>
+                    <ul>
+                        <li><strong>Sandalford Wines:</strong> 와이너리 레스토랑 (차로 5분) ⭐⭐⭐⭐</li>
+                        <li><strong>스완 밸리 초콜릿 컴퍼니:</strong> 수제 초콜릿 (차로 10분) ⭐⭐⭐⭐⭐</li>
+                        <li><strong>The Swan Valley Hotel:</strong> 현지 요리 (차로 8분)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="day-card">
+                <h3 class="day-title">🐨 캐버시엄 야생동물 공원 & 스완 밸리</h3>
+                <div class="table-container">
+                    <table class="w-full border-collapse border border-gray-300 text-sm">
+                        <thead>
+                            <tr class="bg-blue-100">
+                                <th class="border border-gray-300 px-3 py-2 text-left w-1/4">🕐 시간</th>
+                                <th class="border border-gray-300 px-3 py-2 text-left">📍 활동 내용</th>
+                                <th class="border border-gray-300 px-3 py-2 text-left w-1/4">📌 장소/비고</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="border border-gray-300 px-3 py-2 font-medium">08:00 - 09:00</td>
+                                <td class="border border-gray-300 px-3 py-2"><strong>🍳 계란후라이 + 김밥</strong> 아침 식사 후 체크아웃</td>
+                                <td class="border border-gray-300 px-3 py-2">어제 구매한 재료로 한국식 아침</td>
+                            </tr>
+                            <tr class="bg-gray-50">
+                                <td class="border border-gray-300 px-3 py-2 font-medium">09:00 - 11:30</td>
+                                <td class="border border-gray-300 px-3 py-2"><strong>캐버시엄 야생동물 공원</strong>으로 이동</td>
+                                <td class="border border-gray-300 px-3 py-2">드라이브 (2시간 30분)</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-300 px-3 py-2 font-medium">11:30 - 13:00</td>
+                                <td class="border border-gray-300 px-3 py-2"><strong>코알라와 사진 찍기</strong></td>
+                                <td class="border border-gray-300 px-3 py-2">캐버시엄 야생동물 공원</td>
+                            </tr>
+                            <tr class="bg-gray-50">
+                                <td class="border border-gray-300 px-3 py-2 font-medium">13:00 - 14:00</td>
+                                <td class="border border-gray-300 px-3 py-2">캥거루에게 직접 먹이 주기</td>
+                                <td class="border border-gray-300 px-3 py-2">야생동물 공원 내</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-300 px-3 py-2 font-medium">14:00 - 15:00</td>
+                                <td class="border border-gray-300 px-3 py-2">농장 쇼 관람</td>
+                                <td class="border border-gray-300 px-3 py-2">양털 깎기, 개 쇼</td>
+                            </tr>
+                            <tr class="bg-gray-50">
+                                <td class="border border-gray-300 px-3 py-2 font-medium">15:00 - 15:30</td>
+                                <td class="border border-gray-300 px-3 py-2"><strong>스완 밸리</strong>로 이동</td>
+                                <td class="border border-gray-300 px-3 py-2">차로 10-15분</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-300 px-3 py-2 font-medium">15:30 - 16:30</td>
+                                <td class="border border-gray-300 px-3 py-2">Sandalford Wines 와인 시음</td>
+                                <td class="border border-gray-300 px-3 py-2">와이너리 레스토랑</td>
+                            </tr>
+                            <tr class="bg-gray-50">
+                                <td class="border border-gray-300 px-3 py-2 font-medium">16:30 - 17:30</td>
+                                <td class="border border-gray-300 px-3 py-2">스완 밸리 초콜릿 컴퍼니 방문</td>
+                                <td class="border border-gray-300 px-3 py-2">수제 초콜릿 구경 및 구매</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-300 px-3 py-2 font-medium">17:30 - 18:00</td>
+                                <td class="border border-gray-300 px-3 py-2">숙소로 이동</td>
+                                <td class="border border-gray-300 px-3 py-2">디스커버리 파크스 스완 밸리</td>
+                            </tr>
+                            <tr class="bg-gray-50">
+                                <td class="border border-gray-300 px-3 py-2 font-medium">18:00 - 18:30</td>
+                                <td class="border border-gray-300 px-3 py-2">체크인 및 숙소 확인</td>
+                                <td class="border border-gray-300 px-3 py-2">디스커버리 파크스 스완 밸리</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-300 px-3 py-2 font-medium">18:30 - 19:15</td>
+                                <td class="border border-gray-300 px-3 py-2"><strong>🛒 마트 쇼핑</strong> (저녁 재료 + 내일 아침)</td>
+                                <td class="border border-gray-300 px-3 py-2">Coles Swan Valley</td>
+                            </tr>
+                            <tr class="bg-gray-50">
+                                <td class="border border-gray-300 px-3 py-2 font-medium">19:15 - 21:00</td>
+                                <td class="border border-gray-300 px-3 py-2">숙소에서 요리 & 저녁 식사</td>
+                                <td class="border border-gray-300 px-3 py-2">간이 주방 활용 또는 바비큐</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <a href="https://www.google.com/maps/dir/Cervantes+Pinnacles+Motel,+Aragon+Street,+Cervantes+WA,+Australia/Caversham+Wildlife+Park,+Whiteman+Drive+East,+Whiteman+Park+WA,+Australia/Sandalford+Wines,+Caversham+Avenue,+Caversham+WA,+Australia/Discovery+Parks+-+Swan+Valley,+Benara+Road,+Caversham+WA,+Australia" target="_blank" class="google-map-link">3일차 동선 지도 보기</a>
+            </div>
+        </section>
+
+        <section id="4일차" class="mb-8 content-section">
+            <h2 class="section-title">📅 4일차: 2025년 10월 14일 (화)</h2>
+            
+            <!-- 숙소 정보 -->
+            <div class="accommodation-card">
+                <div class="price-badge">45,000원</div>
+                <h3 class="text-xl font-bold mb-2 text-gray-800">🏨 숙소: 디 애드네이트 퍼스 아트 시리즈</h3>
+                <div class="bed-info">
+                    <strong>🛏️ 침실:</strong> 더블베드 2개 | <strong>📍 주소:</strong> 1/2 King Street, Perth
+                </div>
+                <div class="info-section">
+                    <div class="info-title">🚌 교통정보</div>
+                    <ul>
+                        <li>퍼스 기차역까지 도보 3분</li>
+                        <li>무료 CAT 버스 정류장 도보 2분</li>
+                        <li>킹스 파크까지 도보 15분</li>
+                    </ul>
+                </div>
+                <div class="info-section">
+                    <div class="info-title">🍽️ 주변 맛집</div>
+                    <ul>
+                        <li><strong>Tiger Tiger:</strong> 가성비 아시안 퓨전 (도보 5분) ⭐⭐⭐⭐</li>
+                        <li><strong>Dumpling Plus:</strong> 현지인 추천 딤섬 (도보 8분) ⭐⭐⭐⭐⭐</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="day-card">
+                <h3 class="day-title">🏙️ 퍼스 복귀 & 시내 집중 탐방</h3>
+                <div class="table-container">
+                    <table class="w-full border-collapse border border-gray-300 text-sm">
+                        <thead>
+                            <tr class="bg-blue-100">
+                                <th class="border border-gray-300 px-3 py-2 text-left w-1/4">🕐 시간</th>
+                                <th class="border border-gray-300 px-3 py-2 text-left">📍 활동 내용</th>
+                                <th class="border border-gray-300 px-3 py-2 text-left w-1/4">📌 장소/비고</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="border border-gray-300 px-3 py-2 font-medium">08:00 - 09:00</td>
+                                <td class="border border-gray-300 px-3 py-2">아침 식사 후 체크아웃</td>
+                                <td class="border border-gray-300 px-3 py-2">디스커버리 파크스 스완 밸리</td>
+                            </tr>
+                            <tr class="bg-gray-50">
+                                <td class="border border-gray-300 px-3 py-2 font-medium">09:00 - 10:00</td>
+                                <td class="border border-gray-300 px-3 py-2">스완 밸리에서 퍼스 시내로 이동</td>
+                                <td class="border border-gray-300 px-3 py-2">드라이브 (30-40분)</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-300 px-3 py-2 font-medium">10:00 - 11:00</td>
+                                <td class="border border-gray-300 px-3 py-2">렌터카 반납</td>
+                                <td class="border border-gray-300 px-3 py-2">No Bird 렌터카 퍼스 시티 지점</td>
+                            </tr>
+                            <tr class="bg-gray-50">
+                                <td class="border border-gray-300 px-3 py-2 font-medium">11:00 - 12:00</td>
+                                <td class="border border-gray-300 px-3 py-2">호텔 체크인 및 짐 정리</td>
+                                <td class="border border-gray-300 px-3 py-2">디 애드네이트 퍼스</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-300 px-3 py-2 font-medium">12:00 - 13:00</td>
+                                <td class="border border-gray-300 px-3 py-2">점심 식사</td>
+                                <td class="border border-gray-300 px-3 py-2">호텔 주변 레스토랑</td>
+                            </tr>
+                            <tr class="bg-gray-50">
+                                <td class="border border-gray-300 px-3 py-2 font-medium">13:00 - 15:30</td>
+                                <td class="border border-gray-300 px-3 py-2"><strong>킹스 파크</strong> 방문</td>
+                                <td class="border border-gray-300 px-3 py-2">전망대, 파노라마 뷰 감상</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-300 px-3 py-2 font-medium">15:30 - 16:00</td>
+                                <td class="border border-gray-300 px-3 py-2">퍼스 시내 중심가로 이동</td>
+                                <td class="border border-gray-300 px-3 py-2">도보 또는 버스</td>
+                            </tr>
+                            <tr class="bg-gray-50">
+                                <td class="border border-gray-300 px-3 py-2 font-medium">16:00 - 17:00</td>
+                                <td class="border border-gray-300 px-3 py-2"><strong>퍼스 민트</strong> 재방문</td>
+                                <td class="border border-gray-300 px-3 py-2">선택사항 (금 주조 시연)</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-300 px-3 py-2 font-medium">17:00 - 18:00</td>
+                                <td class="border border-gray-300 px-3 py-2"><strong>스완 벨 타워 & 엘리자베스 키</strong> 방문</td>
+                                <td class="border border-gray-300 px-3 py-2">석양 감상</td>
+                            </tr>
+                            <tr class="bg-gray-50">
+                                <td class="border border-gray-300 px-3 py-2 font-medium">18:00 - 20:30</td>
+                                <td class="border border-gray-300 px-3 py-2">저녁 식사</td>
+                                <td class="border border-gray-300 px-3 py-2">Tiger Tiger 또는 Dumpling Plus</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <a href="https://www.google.com/maps/dir/Discovery+Parks+-+Swan+Valley,+Benara+Road,+Caversham+WA,+Australia/No+Birds+Car+Rental+Perth+City,+Adelaide+Terrace,+Perth+WA,+Australia/The+Adnate+Perth+-+Art+Series,+King+Street,+Perth+WA,+Australia/Kings+Park+and+Botanic+Garden,+Fraser+Avenue,+Perth+WA,+Australia" target="_blank" class="google-map-link">4일차 동선 지도 보기</a>
+            </div>
+        </section>
+
+        <section id="5일차" class="mb-8 content-section">
+            <h2 class="section-title">📅 5일차: 2025년 10월 15일 (수)</h2>
+            
+            <!-- 숙소 정보 -->
+            <div class="accommodation-card">
+                <div class="price-badge">90,000원</div>
+                <h3 class="text-xl font-bold mb-2 text-gray-800">🏨 숙소: 노보텔 퍼스 머레이 스트리트</h3>
+                <div class="bed-info">
+                    <strong>🛏️ 침실:</strong> 더블베드 2개 | <strong>📍 주소:</strong> 388 Murray St, Perth
+                </div>
+                <div class="info-section">
+                    <div class="info-title">🚌 교통정보</div>
+                    <ul>
+                        <li>퍼스 기차역까지 도보 8분</li>
+                        <li>프리맨틀 직행 기차 접근 용이</li>
+                        <li>무료 CAT 버스 정류장 도보 3분</li>
+                    </ul>
+                </div>
+                <div class="info-section">
+                    <div class="info-title">🍽️ 프리맨틀 맛집</div>
+                    <ul>
+                        <li><strong>Fisherman's Wharf:</strong> 신선한 피쉬 앤 칩스 ⭐⭐⭐⭐⭐</li>
+                        <li><strong>Little Creatures Brewery:</strong> 로컬 브루어리 & 레스토랑 ⭐⭐⭐⭐</li>
+                        <li><strong>Moore & Moore Cafe:</strong> 빈티지 카페 & 브런치</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="day-card">
+                <h3 class="day-title">🚂 프리맨틀 당일치기 & 퍼스 시내</h3>
+                <div class="table-container">
+                    <table class="w-full border-collapse border border-gray-300 text-sm">
+                        <thead>
+                            <tr class="bg-blue-100">
+                                <th class="border border-gray-300 px-3 py-2 text-left w-1/4">🕐 시간</th>
+                                <th class="border border-gray-300 px-3 py-2 text-left">📍 활동 내용</th>
+                                <th class="border border-gray-300 px-3 py-2 text-left w-1/4">📌 장소/비고</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="border border-gray-300 px-3 py-2 font-medium">08:00 - 09:00</td>
+                                <td class="border border-gray-300 px-3 py-2">아침 식사 후 체크아웃</td>
+                                <td class="border border-gray-300 px-3 py-2">디 애드네이트 퍼스</td>
+                            </tr>
+                            <tr class="bg-gray-50">
+                                <td class="border border-gray-300 px-3 py-2 font-medium">09:00 - 10:00</td>
+                                <td class="border border-gray-300 px-3 py-2">새 호텔로 이동 및 체크인</td>
+                                <td class="border border-gray-300 px-3 py-2">노보텔 퍼스 머레이 스트리트</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-300 px-3 py-2 font-medium">10:00 - 10:30</td>
+                                <td class="border border-gray-300 px-3 py-2">퍼스에서 <strong>프리맨틀</strong>로 기차 이동</td>
+                                <td class="border border-gray-300 px-3 py-2">기차 (30분 소요)</td>
+                            </tr>
+                            <tr class="bg-gray-50">
+                                <td class="border border-gray-300 px-3 py-2 font-medium">10:30 - 13:00</td>
+                                <td class="border border-gray-300 px-3 py-2"><strong>프리맨틀 감옥 투어</strong></td>
+                                <td class="border border-gray-300 px-3 py-2">유네스코 세계문화유산</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-300 px-3 py-2 font-medium">13:00 - 14:00</td>
+                                <td class="border border-gray-300 px-3 py-2">점심 식사</td>
+                                <td class="border border-gray-300 px-3 py-2">Fisherman's Wharf 추천</td>
+                            </tr>
+                            <tr class="bg-gray-50">
+                                <td class="border border-gray-300 px-3 py-2 font-medium">14:00 - 16:00</td>
+                                <td class="border border-gray-300 px-3 py-2"><strong>프리맨틀 마켓</strong> 방문</td>
+                                <td class="border border-gray-300 px-3 py-2">수공예품, 현지 음식</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-300 px-3 py-2 font-medium">16:00 - 17:00</td>
+                                <td class="border border-gray-300 px-3 py-2">프리맨틀 항구 지역 산책</td>
+                                <td class="border border-gray-300 px-3 py-2">항구 및 해변 지역</td>
+                            </tr>
+                            <tr class="bg-gray-50">
+                                <td class="border border-gray-300 px-3 py-2 font-medium">17:00 - 17:30</td>
+                                <td class="border border-gray-300 px-3 py-2">기차로 퍼스 시내 복귀</td>
+                                <td class="border border-gray-300 px-3 py-2">기차 (30분 소요)</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-300 px-3 py-2 font-medium">17:30 - 18:30</td>
+                                <td class="border border-gray-300 px-3 py-2">호텔 휴식</td>
+                                <td class="border border-gray-300 px-3 py-2">노보텔에서 휴식</td>
+                            </tr>
+                            <tr class="bg-gray-50">
+                                <td class="border border-gray-300 px-3 py-2 font-medium">18:30 - 20:30</td>
+                                <td class="border border-gray-300 px-3 py-2">저녁 식사</td>
+                                <td class="border border-gray-300 px-3 py-2">퍼스 시내 레스토랑</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <a href="https://www.google.com/maps/dir/The+Adnate+Perth+-+Art+Series,+King+Street,+Perth+WA,+Australia/Novotel+Perth+Murray+Street,+Murray+Street,+Perth+WA,+Australia/Fremantle+Station,+Fremantle+WA,+Australia/Fremantle+Prison,+The+Terrace,+Fremantle+WA,+Australia" target="_blank" class="google-map-link">5일차 동선 지도 보기</a>
+            </div>
+        </section>
+
+        <section id="6일차" class="mb-8 content-section">
+            <h2 class="section-title">📅 6일차: 2025년 10월 16일 (목)</h2>
+            
+            <!-- 숙소 정보 -->
+            <div class="accommodation-card">
+                <div class="price-badge">AUD 548 (약 500,000원) - 2박</div>
+                <h3 class="text-xl font-bold mb-2 text-gray-800">🏨 숙소: 포 포인트 바이 쉐라톤 퍼스 (6-7일차)</h3>
+                <div class="bed-info">
+                    <strong>🛏️ 침실:</strong> 더블베드 2개 | <strong>📍 주소:</strong> 707 Wellington St, Perth
+                </div>
+                <div class="info-section">
+                    <div class="info-title">🚌 교통정보</div>
+                    <ul>
+                        <li>로트네스트 섬 페리 터미널까지 도보 12분</li>
+                        <li>무료 CAT 버스 정류장 도보 5분</li>
+                        <li>퍼스 공항까지 택시로 20분</li>
+                    </ul>
+                </div>
+                <div class="info-section">
+                    <div class="info-title">🍽️ 로트네스트 섬 맛집</div>
+                    <ul>
+                        <li><strong>Thomsons Restaurant:</strong> 섬 내 메인 레스토랑 ⭐⭐⭐⭐</li>
+                        <li><strong>Geordie Bay Cafe:</strong> 해변가 카페</li>
+                        <li><strong>Hotel Rottnest:</strong> 섬 내 숙박 시설 레스토랑</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="day-card">
+                <h3 class="day-title">🐨 로트네스트 섬 당일치기 & 쿼카와 사진</h3>
+                <div class="table-container">
+                    <table class="w-full border-collapse border border-gray-300 text-sm">
+                        <thead>
+                            <tr class="bg-blue-100">
+                                <th class="border border-gray-300 px-3 py-2 text-left w-1/4">🕐 시간</th>
+                                <th class="border border-gray-300 px-3 py-2 text-left">📍 활동 내용</th>
+                                <th class="border border-gray-300 px-3 py-2 text-left w-1/4">📌 장소/비고</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="border border-gray-300 px-3 py-2 font-medium">08:00 - 09:00</td>
+                                <td class="border border-gray-300 px-3 py-2">아침 식사 후 체크아웃</td>
+                                <td class="border border-gray-300 px-3 py-2">노보텔 퍼스 머레이 스트리트</td>
+                            </tr>
+                            <tr class="bg-gray-50">
+                                <td class="border border-gray-300 px-3 py-2 font-medium">09:00 - 09:30</td>
+                                <td class="border border-gray-300 px-3 py-2">퍼스 페리 터미널로 이동</td>
+                                <td class="border border-gray-300 px-3 py-2">도보 또는 택시</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-300 px-3 py-2 font-medium">09:30 - 11:00</td>
+                                <td class="border border-gray-300 px-3 py-2">페리로 <strong>로트네스트 섬</strong> 출발</td>
+                                <td class="border border-gray-300 px-3 py-2">페리 (1시간 30분)</td>
+                            </tr>
+                            <tr class="bg-gray-50">
+                                <td class="border border-gray-300 px-3 py-2 font-medium">11:00 - 12:00</td>
+                                <td class="border border-gray-300 px-3 py-2">자전거 렌트 또는 아일랜드 익스플로러 버스 탑승</td>
+                                <td class="border border-gray-300 px-3 py-2">섬 내 교통수단 준비</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-300 px-3 py-2 font-medium">12:00 - 13:30</td>
+                                <td class="border border-gray-300 px-3 py-2"><strong>쿼카와 사진 찍기</strong></td>
+                                <td class="border border-gray-300 px-3 py-2">만지거나 먹이 주기 금지</td>
+                            </tr>
+                            <tr class="bg-gray-50">
+                                <td class="border border-gray-300 px-3 py-2 font-medium">13:30 - 14:30</td>
+                                <td class="border border-gray-300 px-3 py-2">점심 식사</td>
+                                <td class="border border-gray-300 px-3 py-2">Thomsons Restaurant</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-300 px-3 py-2 font-medium">14:30 - 15:30</td>
+                                <td class="border border-gray-300 px-3 py-2">핑크 비치, 베이, 파라다이스 킬 해변</td>
+                                <td class="border border-gray-300 px-3 py-2">아름다운 해변 탐방</td>
+                            </tr>
+                            <tr class="bg-gray-50">
+                                <td class="border border-gray-300 px-3 py-2 font-medium">15:30 - 16:30</td>
+                                <td class="border border-gray-300 px-3 py-2">워제맙 등대 또는 바스락 등대 방문</td>
+                                <td class="border border-gray-300 px-3 py-2">섬의 랜드마크 등대</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-300 px-3 py-2 font-medium">16:30 - 18:00</td>
+                                <td class="border border-gray-300 px-3 py-2">페리로 퍼스 복귀</td>
+                                <td class="border border-gray-300 px-3 py-2">페리 (1시간 30분)</td>
+                            </tr>
+                            <tr class="bg-gray-50">
+                                <td class="border border-gray-300 px-3 py-2 font-medium">18:00 - 18:30</td>
+                                <td class="border border-gray-300 px-3 py-2">새 호텔로 이동</td>
+                                <td class="border border-gray-300 px-3 py-2">포 포인트 바이 쉐라톤 퍼스</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-300 px-3 py-2 font-medium">18:30 - 19:30</td>
+                                <td class="border border-gray-300 px-3 py-2">체크인 및 휴식</td>
+                                <td class="border border-gray-300 px-3 py-2">쉐라톤에서 휴식</td>
+                            </tr>
+                            <tr class="bg-gray-50">
+                                <td class="border border-gray-300 px-3 py-2 font-medium">19:30 - 21:00</td>
+                                <td class="border border-gray-300 px-3 py-2">저녁 식사</td>
+                                <td class="border border-gray-300 px-3 py-2">호텔 주변 레스토랑</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <a href="https://www.google.com/maps/dir/Novotel+Perth+Murray+Street,+Murray+Street,+Perth+WA,+Australia/Perth+Ferry+Terminal,+Barrack+Square,+Perth+WA,+Australia/Rottnest+Island,+Western+Australia,+Australia/Four+Points+by+Sheraton+Perth,+Wellington+Street,+Perth+WA,+Australia" target="_blank" class="google-map-link">6일차 동선 지도 보기</a>
+            </div>
+        </section>
+
+        <section id="7일차" class="mb-8 content-section">
+            <h2 class="section-title">📅 7일차: 2025년 10월 17일 (금)</h2>
+            
+            <div class="card mb-4">
+                <h3 class="text-xl font-bold mb-2 text-blue-600">🍽️ 퍼스 시내 고급 맛집</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <ul>
+                        <li><strong>University Cafe:</strong> 현지인 추천 브런치 (도보 8분) ⭐⭐⭐⭐</li>
+                        <li><strong>Tak Chee House:</strong> 가성비 중식당 (도보 6분) ⭐⭐⭐⭐⭐</li>
+                    </ul>
+                    <ul>
+                        <li><strong>Shui Dumpling Bar:</strong> 베트남 스타일 만두 ⭐⭐⭐⭐⭐</li>
+                        <li><strong>Tiger Tiger:</strong> 아시안 퓨전 가성비 맛집 ⭐⭐⭐⭐</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="day-card">
+                <h3 class="day-title">🏛️ 킹스 파크 & 쇼핑 + 마지막 밤</h3>
+                <div class="table-container">
+                    <table class="w-full border-collapse border border-gray-300 text-sm">
+                        <thead>
+                            <tr class="bg-blue-100">
+                                <th class="border border-gray-300 px-3 py-2 text-left w-1/4">🕐 시간</th>
+                                <th class="border border-gray-300 px-3 py-2 text-left">📍 활동 내용</th>
+                                <th class="border border-gray-300 px-3 py-2 text-left w-1/4">📌 장소/비고</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="border border-gray-300 px-3 py-2 font-medium">08:30 - 09:30</td>
+                                <td class="border border-gray-300 px-3 py-2">아침 식사</td>
+                                <td class="border border-gray-300 px-3 py-2">포 포인트 바이 쉐라톤 퍼스</td>
+                            </tr>
+                            <tr class="bg-gray-50">
+                                <td class="border border-gray-300 px-3 py-2 font-medium">09:30 - 10:00</td>
+                                <td class="border border-gray-300 px-3 py-2"><strong>킹스 파크</strong>로 이동</td>
+                                <td class="border border-gray-300 px-3 py-2">버스 또는 택시</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-300 px-3 py-2 font-medium">10:00 - 11:00</td>
+                                <td class="border border-gray-300 px-3 py-2">Fraser Avenue Precinct 전망대</td>
+                                <td class="border border-gray-300 px-3 py-2">파노라마 뷰 감상</td>
+                            </tr>
+                            <tr class="bg-gray-50">
+                                <td class="border border-gray-300 px-3 py-2 font-medium">11:00 - 12:00</td>
+                                <td class="border border-gray-300 px-3 py-2">식물원 & 트리탑 워크웨이</td>
+                                <td class="border border-gray-300 px-3 py-2">호주 고유 식물, Federation Walkway</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-300 px-3 py-2 font-medium">12:00 - 13:00</td>
+                                <td class="border border-gray-300 px-3 py-2">Lotterywest Federation Playground</td>
+                                <td class="border border-gray-300 px-3 py-2">아이들 놀이 시설</td>
+                            </tr>
+                            <tr class="bg-gray-50">
+                                <td class="border border-gray-300 px-3 py-2 font-medium">13:00 - 14:00</td>
+                                <td class="border border-gray-300 px-3 py-2">점심 식사</td>
+                                <td class="border border-gray-300 px-3 py-2">킹스 파크 카페 또는 시내 푸드코트</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-300 px-3 py-2 font-medium">14:00 - 14:30</td>
+                                <td class="border border-gray-300 px-3 py-2">퍼스 시내로 복귀</td>
+                                <td class="border border-gray-300 px-3 py-2">버스 또는 택시</td>
+                            </tr>
+                            <tr class="bg-gray-50">
+                                <td class="border border-gray-300 px-3 py-2 font-medium">14:30 - 16:30</td>
+                                <td class="border border-gray-300 px-3 py-2"><strong>퍼스 시내 쇼핑</strong></td>
+                                <td class="border border-gray-300 px-3 py-2">머레이 & 헤이 스트리트 몰</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-300 px-3 py-2 font-medium">16:30 - 17:30</td>
+                                <td class="border border-gray-300 px-3 py-2">기념품 구매 및 퍼스 민트 재방문</td>
+                                <td class="border border-gray-300 px-3 py-2">선택사항</td>
+                            </tr>
+                            <tr class="bg-gray-50">
+                                <td class="border border-gray-300 px-3 py-2 font-medium">17:30 - 18:30</td>
+                                <td class="border border-gray-300 px-3 py-2">호텔 복귀 후 짐 정리</td>
+                                <td class="border border-gray-300 px-3 py-2">출국 준비</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-300 px-3 py-2 font-medium">18:30 - 20:30</td>
+                                <td class="border border-gray-300 px-3 py-2"><strong>마지막 밤 기념 저녁 식사</strong></td>
+                                <td class="border border-gray-300 px-3 py-2">Shui Dumpling Bar 또는 Tak Chee House</td>
+                            </tr>
+                            <tr class="bg-gray-50">
+                                <td class="border border-gray-300 px-3 py-2 font-medium">20:30 이후</td>
+                                <td class="border border-gray-300 px-3 py-2">다음날 출국 준비</td>
+                                <td class="border border-gray-300 px-3 py-2">호텔에서 휴식</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="day-card mt-4">
+                    <h3 class="day-title">8일차: 2025년 10월 18일 (토) - 퍼스 출발</h3>
+                    <ul>
+                        <li><span class="activity-time">07:00 - 08:00</span> 호텔에서 아침 식사</li>
+                        <li><span class="activity-time">08:00 - 08:30</span> 체크아웃 및 공항 이동 준비</li>
+                        <li><span class="activity-time">08:30 - 09:30</span> 호텔 픽업 서비스로 퍼스 공항 이동 (30분)</li>
+                        <li><span class="activity-time">09:30 - 10:15</span> 공항 수속 및 출국 심사</li>
+                        <li><span class="activity-time">10:15</span> 퍼스 공항 출발 → 베트남 호치민 귀국</li>
+                    </ul>
+                </div>
+
+                <a href="https://www.google.com/maps/dir/Four+Points+by+Sheraton+Perth,+Wellington+Street,+Perth+WA,+Australia/Kings+Park+and+Botanic+Garden,+Fraser+Avenue,+Perth+WA,+Australia/Perth+Mint,+Hay+Street,+East+Perth+WA,+Australia/Perth+Airport,+Perth+Airport+WA,+Australia" target="_blank" class="google-map-link">7일차 & 출발 동선 지도 보기</a>
+            </div>
+        </section>
+
+        <footer class="text-center text-gray-600 text-sm mt-8 p-4">
+            <p>본 일정은 추천 사항이며, 현지 상황 및 가족의 컨디션에 따라 유동적으로 조절하시길 바랍니다.</p>
+            <p>🇦🇺 즐거운 퍼스 여행 되세요! 🇦🇺</p>
+        </footer>
+    </div>
+</body>
+</html>
