@@ -74,7 +74,7 @@ I will correct all instances of `<n>` to `<name>` in the provided KML data.
 
       <Placemark>
         <name>엘리자베스 키</name>
-                    <description>5일차 | 스완강 워터프론트 | Elizabeth Quay, Perth</description>
+                    <description>4일차/5일차 | 스완강 워터프론트 | Elizabeth Quay, Perth</description>
         <Point>
           <coordinates>115.8590,-31.9570,0</coordinates>
         </Point>
@@ -82,7 +82,7 @@ I will correct all instances of `<n>` to `<name>` in the provided KML data.
 
       <Placemark>
         <name>스완 벨 타워</name>
-                    <description>5일차 | 벨타워 | Barrack Square, Perth</description>
+                    <description>4일차/5일차 | 벨타워 | Barrack Square, Perth</description>
         <Point>
           <coordinates>115.8604,-31.9578,0</coordinates>
         </Point>
@@ -98,7 +98,7 @@ I will correct all instances of `<n>` to `<name>` in the provided KML data.
 
       <Placemark>
         <name>헤이 스트리트 몰</name>
-        <description>1일차/7일차 | 쇼핑몰 | Hay Street Mall, Perth</description>
+        <description>1일차/4일차/7일차 | 쇼핑몰 | Hay Street Mall, Perth</description>
         <Point>
           <coordinates>115.8571,-31.9522,0</coordinates>
         </Point>
@@ -106,7 +106,7 @@ I will correct all instances of `<n>` to `<name>` in the provided KML data.
 
       <Placemark>
         <name>런던 코트</name>
-                    <description>5일차 | 쇼핑 아케이드 | London Court, Perth</description>
+                    <description>4일차/5일차 | 쇼핑 아케이드 | London Court, Perth</description>
         <Point>
           <coordinates>115.8576,-31.9520,0</coordinates>
         </Point>
@@ -335,6 +335,35 @@ I will correct all instances of `<n>` to `<name>` in the provided KML data.
         <description>2-4일차 | 렌터카 업체 | 160 Adelaide Terrace, Perth</description>
         <Point>
           <coordinates>115.8720,-31.9540,0</coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+
+    <Folder>
+      <n>🏖️ 비치 & 해변 (2개)</n>
+      <description>퍼스 최고의 비치들</description>
+
+      <Placemark>
+        <n>코테슬로 비치</n>
+        <description>5일차 | 세계적인 일몰 명소 🌅 | Cottesloe Beach, Cottesloe</description>
+        <Point>
+          <coordinates>115.7573,-31.9971,0</coordinates>
+        </Point>
+      </Placemark>
+
+      <Placemark>
+        <n>Indiana Tea House</n>
+        <description>5일차 | 비치 카페 & 레스토랑 ⭐⭐⭐⭐⭐</description>
+        <Point>
+          <coordinates>115.7575,-31.9975,0</coordinates>
+        </Point>
+      </Placemark>
+
+      <Placemark>
+        <n>Bib & Tucker</n>
+        <description>5일차 | 비치사이드 브런치 카페 ⭐⭐⭐⭐</description>
+        <Point>
+          <coordinates>115.7578,-31.9980,0</coordinates>
         </Point>
       </Placemark>
     </Folder>
